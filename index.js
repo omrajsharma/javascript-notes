@@ -665,6 +665,16 @@ symbol
 // }
 // bioData.getThis();
 
+// var name = 'omraj';
+// const bio = {
+//     name : 'ommi',
+//     age : 20,
+//     college : 'MAIT',
+//     func : function () {
+//         return this.name;
+//     }
+// }
+// console.log(bio.func())
 
 
 
@@ -761,7 +771,6 @@ symbol
 
 // // Another throw example
 // let a = 5;
-
 // try{
 //     if( a > 5 ){
 //         throw "Positive Number";
@@ -860,7 +869,6 @@ symbol
 //     return a/b;
 // }
 // const calci = (num1, num2, operator) => operator(num1, num2) ;
-
 // console.log(calci(1,2,sub));
 
 
@@ -920,15 +928,28 @@ symbol
 
 // Scope Chain and Lexical(Inherarchy or sequence) Scoping
 // Lexical Scoping means now the inner function can get access to their function variable but vice versa is not true;
-//  var a = 5;
+// (Inner can access outer level)
+// var a = 5;
 // function check() {
 //     let a = 10;
 //     console.log(a);
 // }
 // check();
+
+// Lexical Scoping example for mdn
+// function init() {
+//     var name = 'Mozilla'; // name is a local variable created by init
+//     function displayName() { // displayName() is the inner function, a closure
+//       alert(name); // use variable declared in the parent function
+//     }
+//     displayName();
+//   }
+//   init();
+
 // null <- global <- display <- display1  (Lexical Environment)
 // moving from local to parent lexical envi to their parent environment is called 
 // ###$$$(SCOPE CHAIN)$$$###
+// over multiple levels
 // function display(){
 //     console.log(b);
 //     function display1(){
@@ -940,6 +961,28 @@ symbol
 // display();
 
 
+
+
+// void fun()
+// {
+//     printf("%d", x);
+// }
+
+// void dummy1()
+// {
+//     int x = 5;
+
+//     fun();
+// }
+
+// void dummy2()
+// {
+//     int x = 10;
+
+//     fun();
+// }
+// dummy1();        // will print 5
+// dummy2();        // will print 10
 
 
 
@@ -974,8 +1017,19 @@ symbol
 
 
 // CLOSURE
-// a closure gives you the access to an outer function's scopre from an inner function
-
+// MDN example
+// functions in javascript form closures
+// A closure is the combination of a function and the lexical environment within which that function was declared.
+// function makeFunc() {
+//     var name = 'Mozilla';
+//     function displayName() {
+//       console.log(name);
+//     }
+//     return displayName;
+//   }
+  
+//   var myFunc = makeFunc();
+//   myFunc();
 
 
 
