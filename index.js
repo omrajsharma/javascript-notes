@@ -635,7 +635,22 @@ symbol
 // clearTimeout
 // clearInterval
 
+// Set Interval
+// var inter = setInterval( ()=>{
+//     document.getElementById('head').innerHTML = n;
+//     n++;
+// } , 1000 )
+// let n = 0;
+// function stop() {
+//     clearInterval(inter);
+// }
 
+// Set Timeout
+// console.log('before set time out')
+// setTimeout(() => {
+//     console.log('after 2 second')
+// }, 2000);
+// console.log('after set timeout')
 
 
 
